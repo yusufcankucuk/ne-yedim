@@ -1,4 +1,4 @@
-"""ORTAK sonuç kaydı (§6.3): her deney results/results.csv'ye bir satır, tahminler results/preds/'e."""
+"""ORTAK sonuç kaydı (§4.3): her deney results/results.csv'ye bir satır, tahminler results/preds/'e."""
 import csv
 import datetime
 import getpass

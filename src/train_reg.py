@@ -1,7 +1,7 @@
-"""Adım 11–13 — kalori regresyonu (Nutrition5k, yalnızca üstten RGB).
+"""Kalori regresyonu (Nutrition5k, yalnızca üstten RGB).
 
-    python -m src.train_reg --backbone resnet50                                   # yalnızca kalori (Adım 11)
-    python -m src.train_reg --backbone resnet50 --targets calories mass fat carb protein   # çok görevli (Adım 12)
+    python -m src.train_reg --backbone resnet50                                   # yalnızca kalori
+    python -m src.train_reg --backbone resnet50 --targets calories mass fat carb protein   # çok görevli
     python -m src.train_reg --backbone resnet50 --no-aug                          # ablation: artırmasız baseline
     python -m src.train_reg --backbone resnet50 --epochs 1 --limit 64 --dry-run   # hızlı deneme (kayıt yok)
 
@@ -96,7 +96,7 @@ def main():
         pred, y = decoded(dl)
         m = regression_metrics(y[:, 0], pred[:, 0], ci=True)
         extra = ", ".join(f"{t} MAE {np.abs(pred[:, i] - y[:, i]).mean():.1f}" for i, t in enumerate(targets) if i)
-        notes = "Adım 11–13 transfer CNN" + (f"; {extra}" if extra else "")
+        notes = "transfer CNN" + (f"; {extra}" if extra else "")
         bins = classification_metrics(to_bins(y[:, 0], CALORIE_BIN_EDGES), to_bins(pred[:, 0], CALORIE_BIN_EDGES), bin_scores(pred[:, 0], CALORIE_BIN_EDGES), ci=True)
         results[split] = m
         print(f"  ✓ {split}: MAE {m['MAE']:.1f} [{m['MAE_ci_low']:.1f}–{m['MAE_ci_high']:.1f}]  PMAE %{m['PMAE']:.1f}  "

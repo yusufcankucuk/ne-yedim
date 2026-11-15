@@ -23,7 +23,7 @@ build_regressor = build_model  # eski ad
 def init_regression_head(model):
     """Başlık ağırlıkları 0, bias 1 → ilk tahmin her görüntü için train ortalaması (ölçeklenmiş hedef ~1).
     Neden: timm'in EfficientNet başlatması (TF tarzı, fan_out=1 → ağırlıklar ±1) ilk çıktıyı ~7 kat büyük
-    veriyordu; ilk epoch'larda bozuk gradyanlar omurgayı da bozdu (Adım 11: test MAE 104 kcal)."""
+    veriyordu; ilk epoch'larda bozuk gradyanlar omurgayı da bozdu (test MAE 104 kcal)."""
     head = model.get_classifier()
     torch.nn.init.zeros_(head.weight)
     torch.nn.init.ones_(head.bias)

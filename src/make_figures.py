@@ -1,4 +1,4 @@
-"""Adım 15 — Değerlendirme figürleri ve rapor tabloları (Tablo 1–3), tamamı results/ içindeki kayıtlardan.
+"""Değerlendirme figürleri ve rapor tabloları (Tablo 1–3), tamamı results/ içindeki kayıtlardan.
 
     python -m src.make_figures                                 # varsayılanlar: ViT-B/16 (sınıf), ConvNeXt-T (kalori)
     python -m src.make_figures --cls-model convnext_tiny_cls --reg-model vit_b16_reg
@@ -10,18 +10,18 @@ görüntüleri kullanır (yoksa gri kutu çizilir). Her figür için README'ye y
 Çıktılar (results/figures/eval_*.png, results/*.csv|md):
     eval_karisiklik_matrisi.png   25×25 karışıklık matrisi (satır normalize)
     eval_sinif_f1.png             sınıf başına F1
-    eval_karisan_ciftler.csv      en çok karışan 10 sınıf çifti  → Adım 16
+    eval_karisan_ciftler.csv      en çok karışan 10 sınıf çifti
     eval_tahmin_gercek.png        tahmin–gerçek saçılımı (±100 kcal bandı, balıklı tabaklar ayrı)
     eval_hata_histogrami.png      işaretli hata (tahmin − gerçek) histogramı
     eval_aralik_mae.png           kalori aralığı başına MAE (düşük / orta / yüksek)
     eval_model_karsilastirma.png  test MAE + %95 güven aralığı, literatür referans çizgileri
     eval_egitim_egrileri.png      doğrulama skoru – epoch
-    eval_en_kotu_tabaklar.png     en kötü 20 tabak ızgarası, eval_en_kotu_20.csv → Adım 16
+    eval_en_kotu_tabaklar.png     en kötü 20 tabak ızgarası, eval_en_kotu_20.csv
     eval_roc.png                  ROC eğrileri (bire-karşı-hepsi): final sınıflandırıcının 25 sınıfı + modellerin makro
                                   ortalaması; results/probs/ varsa (notebook 13)
     tablo1.md, tablo2.md, tablo3_kalori_araligi.md   rapora yapıştırılacak markdown tablolar
 
-Grad-CAM (Adım 16) ayrı betikte: `python -m src.gradcam --ckpt checkpoints/<model>.pt` (checkpoint gerekir);
+Grad-CAM ayrı betikte: `python -m src.gradcam --ckpt checkpoints/<model>.pt` (checkpoint gerekir);
 en kötü 20 tabağın kimlikleri eval_en_kotu_20.csv'de. Bu betik checkpoint gerektirmez.
 """
 import argparse
@@ -74,7 +74,7 @@ TABLO2_MODELS = ["naive_mean", "cnn_xgb", "resnet50_reg_timminit", "resnet50_reg
 # Model karşılaştırma figürü ve aralık başına MAE: kötü/yinelenen run'lar hariç
 COMPARE_MODELS = ["naive_mean", "vlm_gemini_3_5_flash_lite", "cnn_xgb", "resnet50_reg_timminit", "resnet50_reg_mt",
                   "efficientnet_b0_reg", "vit_b16_reg", "convnext_tiny_reg", "convnext_tiny_reg_mt"]
-# Ablation tablosu (Adım 17): ConvNeXt-T üzerinde tek tek değişiklikler; ilk eleman referans
+# Ablation tablosu: ConvNeXt-T üzerinde tek tek değişiklikler; ilk eleman referans
 ABLATION_MODELS = ["convnext_tiny_reg", "convnext_tiny_reg_mt", "convnext_tiny_reg_log1p", "convnext_tiny_reg_noaug"]
 HISTORY_REG = ["convnext_tiny_reg", "vit_b16_reg", "efficientnet_b0_reg", "resnet50_reg_mt", "resnet50_reg_timminit", "resnet50_reg"]
 HISTORY_CLS = ["vit_b16_384_cls", "vit_b16_cls", "convnext_tiny_cls", "efficientnet_b0_cls", "resnet50_cls"]
@@ -198,7 +198,7 @@ def tablo3_md(results, models=TABLO2_MODELS):
 
 
 def tablo_ablation_md(results, models=ABLATION_MODELS):
-    """Adım 17 ablation tablosu: referansa göre MAE farkı yalnızca nokta tahmin; güven aralığı için `src.compare`."""
+    """Ablation tablosu: referansa göre MAE farkı yalnızca nokta tahmin; güven aralığı için `src.compare`."""
     base = results_row(results, "calorie", models[0]).MAE
     rows = []
     for m in models:
@@ -440,7 +440,7 @@ def fig_worst_dishes(worst, img_dir, ncols=5, w=2.6):
 # ---------------------------------------------------------------- ana akış
 
 def parse_args(argv=None):
-    ap = argparse.ArgumentParser(description="Adım 15 değerlendirme figürleri ve Tablo 1–3 (results/ kayıtlarından).")
+    ap = argparse.ArgumentParser(description="Değerlendirme figürleri ve Tablo 1–3 (results/ kayıtlarından).")
     ap.add_argument("--cls-model", default="vit_b16_384_cls", help="karışıklık matrisi ve sınıf F1 için model")
     ap.add_argument("--cls-second", default="convnext_tiny_cls", help="sınıf F1 üstüne bindirilecek ikinci model ('' = yok)")
     ap.add_argument("--reg-model", default="convnext_tiny_reg_mt", help="saçılım, histogram ve en kötü tabaklar için model")

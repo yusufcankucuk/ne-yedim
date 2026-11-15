@@ -1,4 +1,4 @@
-"""Adım 9 — klasik ML: Tablo 1 ve 2'nin klasik satırları.
+"""Klasik ML: Tablo 1 ve 2'nin klasik satırları.
 
     python -m src.classic_ml                 # hepsi (özellikler önbelleğe alınır: data/features/)
     python -m src.classic_ml --only cls      # yalnızca Food-101
@@ -29,7 +29,7 @@ from .features import load
 from .metrics import classification_metrics, regression_metrics, bin_scores, to_bins
 from .results import log_result, save_preds
 
-NOTE = "Adım 9 klasik ML"
+NOTE = "klasik ML"
 PCA_DIM = 256
 
 

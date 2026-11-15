@@ -1,4 +1,4 @@
-"""Ortak sabitler (§6.1). Bir değeri değiştirirseniz devir günlüğüne yazın."""
+"""Ortak sabitler (§4.1)."""
 import os
 import random
 from pathlib import Path

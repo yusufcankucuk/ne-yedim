@@ -1,4 +1,4 @@
-"""Adım 14 — VLM sıfır-atış referansı (§7): hazır bir görü-dil modeline Nutrition5k test tabaklarının kalorisini sordurur.
+"""VLM sıfır-atış referansı (§5): hazır bir görü-dil modeline Nutrition5k test tabaklarının kalorisini sordurur.
 
     GEMINI_API_KEY=... python -m src.vlm_eval                                  # 507 test tabağı, gemini-2.5-flash
     GEMINI_API_KEY=... python -m src.vlm_eval --n 300 --seed 42 --rpm 10       # maliyet sorunsa rastgele 300 tabak
@@ -273,7 +273,7 @@ def summarize(records, ids, meta, train_mean):
 
 
 def main(argv=None):
-    ap = argparse.ArgumentParser(description="VLM sıfır-atış kalori referansı (Adım 14).")
+    ap = argparse.ArgumentParser(description="VLM sıfır-atış kalori referansı.")
     ap.add_argument("--provider", choices=["gemini", "openai"], default="gemini",
                     help="gemini: Google REST (GEMINI_API_KEY). openai: OpenAI uyumlu chat/completions (OPENAI_API_KEY, --base-url).")
     ap.add_argument("--model", default="gemini-2.5-flash",
@@ -371,7 +371,7 @@ def main(argv=None):
     print(f"  ayrıştırılamayan → train ortalaması ({train_mean:.1f} kcal) ile: MAE {fb['MAE']:.1f}  PMAE %{fb['PMAE']:.1f}")
 
     config = f"{args.provider}:{args.model}_T0_{args.img_size}px" + (f"_n{args.n}_seed{args.seed}" if args.n else "")
-    notes = (f"Adım 14 VLM sıfır-atış; {s['n']} tabak, {s['n_ok']} ayrıştırıldı, ayrıştırılamayan {s['n_unparsable']} "
+    notes = (f"VLM sıfır-atış; {s['n']} tabak, {s['n_ok']} ayrıştırıldı, ayrıştırılamayan {s['n_unparsable']} "
              f"(%{s['fail_rate']:.1f}); metrikler ayrıştırılamayanlar atılarak, train ort. ({train_mean:.0f} kcal) ile "
              f"MAE {fb['MAE']:.1f} PMAE %{fb['PMAE']:.1f}; token giriş {s['prompt_tokens']} çıkış {s['output_tokens']}; "
              f"maliyet {cost_txt}" + (f" ({args.price_in:g}/{args.price_out:g} $/M)" if cost is not None else ""))

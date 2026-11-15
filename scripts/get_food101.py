@@ -97,7 +97,7 @@ def main():
             upload(repo_slug(), archive, tag="data")
     else:
         if "GH_TOKEN" not in os.environ:
-            sys.exit("GH_TOKEN ortam değişkeni yok (bkz. README §5.1)")
+            sys.exit("GH_TOKEN ortam değişkeni yok (bkz. README §3.1)")
         fetch(out)
 
 

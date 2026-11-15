@@ -1,4 +1,4 @@
-"""Adım 10 ve 13 — yemek türü sınıflandırması (Food-101, 25 sınıf).
+"""Yemek türü sınıflandırması (Food-101, 25 sınıf).
 
     python -m src.train_cls --backbone resnet50
     python -m src.train_cls --backbone efficientnet_b0
@@ -70,7 +70,7 @@ def main():
     ms = ms_per_image(model, device, args.img_size)
     config = (f"{args.backbone}.{model.pretrained_cfg.get('tag', '')}_lr{args.lr_backbone:g}/{args.lr_head:g}"
               f"_bs{args.batch_size}_{args.img_size}px_ep{best_epoch}/{args.epochs}_ls{args.label_smoothing:g}")
-    notes = f"Adım 10/13 transfer CNN; {n_params:.1f}M parametre; {ms:.2f} ms/görüntü ({device.type})"
+    notes = f"transfer CNN; {n_params:.1f}M parametre; {ms:.2f} ms/görüntü ({device.type})"
     results = {}
     for split, ds, dl in (("val", val_ds, val_dl), ("test", test_ds, test_dl)):
         out, y = predict(model, dl, device)

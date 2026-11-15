@@ -31,7 +31,7 @@ def main():
     df = pd.read_csv(f"{args.dir}/labels.csv")
     if df.empty:
         sys.exit(f"{args.dir}/labels.csv boş: önce fotoğrafları {args.dir}/ içine koyup satırları doldurun "
-                 "(README §7 'Kendi fotoğraflarımızla test'). Örnek satır: tabak01_ust.jpg,520,ust,tartı+TürKomp,pilav 180 g + tavuk 120 g")
+                 "(README §5 'Kendi fotoğraflarımızla test'). Örnek satır: tabak01_ust.jpg,520,ust,tartı+TürKomp,pilav 180 g + tavuk 120 g")
     missing = [f for f in df["file"] if not (pathlib.Path(args.dir) / f).exists()]
     if missing:
         sys.exit(f"labels.csv'de olup klasörde bulunmayan dosyalar: {missing}")

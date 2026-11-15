@@ -1,4 +1,4 @@
-"""Kardeş-sızıntısı ölçümü (Adım 16): resmi test kümesindeki tabakların bir kısmı, train'deki bir tabağın
+"""Kardeş-sızıntısı ölçümü: resmi test kümesindeki tabakların bir kısmı, train'deki bir tabağın
 malzeme eklenmiş/çıkarılmış hali (EDA: ~%22). Bu tabaklarda hata daha düşükse, test MAE'si iyimserdir.
 
     python -m src.leakage                       # → results/eval_kardes_sizintisi.csv + figures/eval_kardes_sizintisi.png

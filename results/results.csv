@@ -1,38 +1,38 @@
 date,owner,task,model,config,split,accuracy,precision,recall,f1,f1_ci_low,f1_ci_high,top5,roc_auc,MAE,MAE_ci_low,MAE_ci_high,PMAE,MAPE,RMSE,R2,within_100kcal,notes
-2026-10-28,traldo,calorie,naive_mean,sabit=254.3kcal,val,,,,,,,,,151.6841,139.1713,165.2768,61.1116,205.4139,189.1863,-0.001,35.7143,Adım 8 naif baseline
-2026-10-28,traldo,calorie_bins,naive_mean,sabit=254.3kcal,val,0.35,0.1167,0.3333,0.1728,0.1524,0.1917,,0.5,,,,,,,,,Adım 8 naif baseline
-2026-10-28,traldo,calorie,naive_mean,sabit=254.3kcal,test,,,,,,,,,168.4403,157.9963,180.1029,65.9343,432.7683,212.0356,-0.0,31.5582,Adım 8 naif baseline
-2026-10-28,traldo,calorie_bins,naive_mean,sabit=254.3kcal,test,0.3136,0.1045,0.3333,0.1592,0.1418,0.174,,0.5,,,,,,,,,Adım 8 naif baseline
-2026-10-28,traldo,calorie,naive_median,sabit=208.1kcal,val,,,,,,,,,147.2308,133.6779,162.2845,59.3174,166.4792,193.2926,-0.045,38.2143,Adım 8 naif baseline
-2026-10-28,traldo,calorie_bins,naive_median,sabit=208.1kcal,val,0.35,0.1167,0.3333,0.1728,0.1524,0.1917,,0.5,,,,,,,,,Adım 8 naif baseline
-2026-10-28,traldo,calorie,naive_median,sabit=208.1kcal,test,,,,,,,,,167.3421,156.2868,179.5341,65.5044,353.8953,217.2552,-0.0499,32.7416,Adım 8 naif baseline
-2026-10-28,traldo,calorie_bins,naive_median,sabit=208.1kcal,test,0.3136,0.1045,0.3333,0.1592,0.1418,0.174,,0.5,,,,,,,,,Adım 8 naif baseline
-2026-10-28,traldo,cls,naive_most_frequent,sınıf=apple_pie,val,0.04,0.0016,0.04,0.0031,0.0025,0.0037,,,,,,,,,,,Adım 8 naif baseline (sınıflar dengeli: 1/25)
-2026-10-28,traldo,cls,naive_most_frequent,sınıf=apple_pie,test,0.04,0.0016,0.04,0.0031,0.0027,0.0034,,,,,,,,,,,Adım 8 naif baseline (sınıflar dengeli: 1/25)
-2026-10-28,traldo,calorie,cnn_ridge,alpha=10000,val,,,,,,,,,84.8801,75.5697,94.3238,34.1971,90.6693,119.3019,0.6019,68.9286,"Adım 9 klasik ML; val MAE: alpha=10→168.1, alpha=100→119.5, alpha=1000→90.2, alpha=10000→84.9, alpha=100000→109.8"
-2026-10-28,traldo,calorie_bins,cnn_ridge,alpha=10000,val,0.6643,0.7135,0.6607,0.6644,0.6094,0.7184,,0.8487,,,,,,,,,Adım 9 klasik ML
-2026-10-28,traldo,calorie,cnn_ridge,alpha=10000,test,,,,,,,,,78.2152,72.0467,85.5988,30.6165,90.3829,113.2762,0.7146,74.359,"Adım 9 klasik ML; val MAE: alpha=10→168.1, alpha=100→119.5, alpha=1000→90.2, alpha=10000→84.9, alpha=100000→109.8"
-2026-10-28,traldo,calorie_bins,cnn_ridge,alpha=10000,test,0.7396,0.7702,0.7402,0.743,0.7046,0.7795,,0.8991,,,,,,,,,Adım 9 klasik ML
-2026-10-28,traldo,calorie,cnn_rf,min_leaf=1,val,,,,,,,,,86.3003,77.486,96.5403,34.7693,92.1871,120.4019,0.5946,66.4286,"Adım 9 klasik ML; val MAE: min_leaf=1→86.3, min_leaf=5→86.4"
-2026-10-28,traldo,calorie_bins,cnn_rf,min_leaf=1,val,0.6536,0.7331,0.6485,0.6519,0.592,0.7048,,0.8451,,,,,,,,,Adım 9 klasik ML
-2026-10-28,traldo,calorie,cnn_rf,min_leaf=1,test,,,,,,,,,88.9384,81.9374,96.8953,34.814,127.5703,126.7941,0.6424,69.0335,"Adım 9 klasik ML; val MAE: min_leaf=1→86.3, min_leaf=5→86.4"
-2026-10-28,traldo,calorie_bins,cnn_rf,min_leaf=1,test,0.7041,0.7586,0.7064,0.7099,0.6701,0.7463,,0.8759,,,,,,,,,Adım 9 klasik ML
-2026-10-28,traldo,calorie,cnn_xgb,"max_depth=6,n_trees=915",val,,,,,,,,,76.051,67.3425,85.7463,30.64,70.4399,112.7586,0.6444,72.8571,"Adım 9 klasik ML; val MAE: max_depth=4→76.4, max_depth=6→76.1"
-2026-10-28,traldo,calorie_bins,cnn_xgb,"max_depth=6,n_trees=915",val,0.6714,0.7292,0.6677,0.6772,0.6248,0.7272,,0.8613,,,,,,,,,Adım 9 klasik ML
-2026-10-28,traldo,calorie,cnn_xgb,"max_depth=6,n_trees=915",test,,,,,,,,,77.3745,70.8686,84.8102,30.2875,78.8608,114.1721,0.7101,73.1755,"Adım 9 klasik ML; val MAE: max_depth=4→76.4, max_depth=6→76.1"
-2026-10-28,traldo,calorie_bins,cnn_xgb,"max_depth=6,n_trees=915",test,0.7416,0.771,0.7424,0.7467,0.7075,0.7851,,0.8991,,,,,,,,,Adım 9 klasik ML
-2026-10-28,traldo,calorie,hogcolor_xgb,"max_depth=4,n_trees=342",val,,,,,,,,,95.1837,84.0886,106.6808,38.3483,107.2823,134.9653,0.4905,63.9286,"Adım 9 klasik ML; val MAE: max_depth=4→95.2, max_depth=6→95.3"
-2026-10-28,traldo,calorie_bins,hogcolor_xgb,"max_depth=4,n_trees=342",val,0.6286,0.6925,0.6233,0.6271,0.5695,0.6808,,0.7947,,,,,,,,,Adım 9 klasik ML
-2026-10-28,traldo,calorie,hogcolor_xgb,"max_depth=4,n_trees=342",test,,,,,,,,,103.9478,96.2513,112.1278,40.6893,141.0265,139.9466,0.5644,61.7357,"Adım 9 klasik ML; val MAE: max_depth=4→95.2, max_depth=6→95.3"
-2026-10-28,traldo,calorie_bins,hogcolor_xgb,"max_depth=4,n_trees=342",test,0.6272,0.6788,0.629,0.6354,0.5979,0.677,,0.8323,,,,,,,,,Adım 9 klasik ML
-2026-10-28,traldo,cls,hogcolor_svm_rbf,C=10,val,0.2599,0.2559,0.2598,0.2556,0.2364,0.2734,0.6158,,,,,,,,,,"Adım 9 klasik ML; val F1: C=1→0.251, C=10→0.256"
-2026-10-28,traldo,cls,hogcolor_svm_rbf,C=10,test,0.2984,0.2921,0.2984,0.2933,0.2827,0.3043,0.6528,,,,,,,,,,"Adım 9 klasik ML; val F1: C=1→0.251, C=10→0.256"
-2026-10-28,traldo,cls,hogcolor_rf,min_leaf=3,val,0.2465,0.2313,0.2466,0.2263,0.2065,0.2439,0.5795,,,,,,,,,,"Adım 9 klasik ML; val F1: min_leaf=1→0.220, min_leaf=3→0.226"
-2026-10-28,traldo,cls,hogcolor_rf,min_leaf=3,test,0.2702,0.2641,0.2702,0.2495,0.2393,0.2602,0.6109,,,,,,,,,,"Adım 9 klasik ML; val F1: min_leaf=1→0.220, min_leaf=3→0.226"
-2026-10-28,traldo,cls,hogcolor_knn,k=5,val,0.0966,0.1371,0.0966,0.0792,0.0654,0.0917,0.2908,,,,,,,,,,"Adım 9 klasik ML; val F1: k=5→0.079, k=15→0.066, k=31→0.065"
-2026-10-28,traldo,cls,hogcolor_knn,k=5,test,0.0994,0.1589,0.0994,0.0798,0.0726,0.0869,0.3229,,,,,,,,,,"Adım 9 klasik ML; val F1: k=5→0.079, k=15→0.066, k=31→0.065"
-2026-10-28,traldo,cls,cnn_logreg,C=0.01,val,0.7812,0.7866,0.7813,0.7823,0.7628,0.7985,0.9573,,,,,,,,,,"Adım 9 klasik ML; val F1: C=0.01→0.782, C=0.1→0.763, C=1→0.763"
-2026-10-28,traldo,cls,cnn_logreg,C=0.01,test,0.8371,0.8379,0.8371,0.8372,0.8282,0.8463,0.9794,,,,,,,,,,"Adım 9 klasik ML; val F1: C=0.01→0.782, C=0.1→0.763, C=1→0.763"
+2026-10-28,ekip,calorie,naive_mean,sabit=254.3kcal,val,,,,,,,,,151.6841,139.1713,165.2768,61.1116,205.4139,189.1863,-0.001,35.7143,Adım 8 naif baseline
+2026-10-28,ekip,calorie_bins,naive_mean,sabit=254.3kcal,val,0.35,0.1167,0.3333,0.1728,0.1524,0.1917,,0.5,,,,,,,,,Adım 8 naif baseline
+2026-10-28,ekip,calorie,naive_mean,sabit=254.3kcal,test,,,,,,,,,168.4403,157.9963,180.1029,65.9343,432.7683,212.0356,-0.0,31.5582,Adım 8 naif baseline
+2026-10-28,ekip,calorie_bins,naive_mean,sabit=254.3kcal,test,0.3136,0.1045,0.3333,0.1592,0.1418,0.174,,0.5,,,,,,,,,Adım 8 naif baseline
+2026-10-28,ekip,calorie,naive_median,sabit=208.1kcal,val,,,,,,,,,147.2308,133.6779,162.2845,59.3174,166.4792,193.2926,-0.045,38.2143,Adım 8 naif baseline
+2026-10-28,ekip,calorie_bins,naive_median,sabit=208.1kcal,val,0.35,0.1167,0.3333,0.1728,0.1524,0.1917,,0.5,,,,,,,,,Adım 8 naif baseline
+2026-10-28,ekip,calorie,naive_median,sabit=208.1kcal,test,,,,,,,,,167.3421,156.2868,179.5341,65.5044,353.8953,217.2552,-0.0499,32.7416,Adım 8 naif baseline
+2026-10-28,ekip,calorie_bins,naive_median,sabit=208.1kcal,test,0.3136,0.1045,0.3333,0.1592,0.1418,0.174,,0.5,,,,,,,,,Adım 8 naif baseline
+2026-10-28,ekip,cls,naive_most_frequent,sınıf=apple_pie,val,0.04,0.0016,0.04,0.0031,0.0025,0.0037,,,,,,,,,,,Adım 8 naif baseline (sınıflar dengeli: 1/25)
+2026-10-28,ekip,cls,naive_most_frequent,sınıf=apple_pie,test,0.04,0.0016,0.04,0.0031,0.0027,0.0034,,,,,,,,,,,Adım 8 naif baseline (sınıflar dengeli: 1/25)
+2026-10-28,ekip,calorie,cnn_ridge,alpha=10000,val,,,,,,,,,84.8801,75.5697,94.3238,34.1971,90.6693,119.3019,0.6019,68.9286,"Adım 9 klasik ML; val MAE: alpha=10→168.1, alpha=100→119.5, alpha=1000→90.2, alpha=10000→84.9, alpha=100000→109.8"
+2026-10-28,ekip,calorie_bins,cnn_ridge,alpha=10000,val,0.6643,0.7135,0.6607,0.6644,0.6094,0.7184,,0.8487,,,,,,,,,Adım 9 klasik ML
+2026-10-28,ekip,calorie,cnn_ridge,alpha=10000,test,,,,,,,,,78.2152,72.0467,85.5988,30.6165,90.3829,113.2762,0.7146,74.359,"Adım 9 klasik ML; val MAE: alpha=10→168.1, alpha=100→119.5, alpha=1000→90.2, alpha=10000→84.9, alpha=100000→109.8"
+2026-10-28,ekip,calorie_bins,cnn_ridge,alpha=10000,test,0.7396,0.7702,0.7402,0.743,0.7046,0.7795,,0.8991,,,,,,,,,Adım 9 klasik ML
+2026-10-28,ekip,calorie,cnn_rf,min_leaf=1,val,,,,,,,,,86.3003,77.486,96.5403,34.7693,92.1871,120.4019,0.5946,66.4286,"Adım 9 klasik ML; val MAE: min_leaf=1→86.3, min_leaf=5→86.4"
+2026-10-28,ekip,calorie_bins,cnn_rf,min_leaf=1,val,0.6536,0.7331,0.6485,0.6519,0.592,0.7048,,0.8451,,,,,,,,,Adım 9 klasik ML
+2026-10-28,ekip,calorie,cnn_rf,min_leaf=1,test,,,,,,,,,88.9384,81.9374,96.8953,34.814,127.5703,126.7941,0.6424,69.0335,"Adım 9 klasik ML; val MAE: min_leaf=1→86.3, min_leaf=5→86.4"
+2026-10-28,ekip,calorie_bins,cnn_rf,min_leaf=1,test,0.7041,0.7586,0.7064,0.7099,0.6701,0.7463,,0.8759,,,,,,,,,Adım 9 klasik ML
+2026-10-28,ekip,calorie,cnn_xgb,"max_depth=6,n_trees=915",val,,,,,,,,,76.051,67.3425,85.7463,30.64,70.4399,112.7586,0.6444,72.8571,"Adım 9 klasik ML; val MAE: max_depth=4→76.4, max_depth=6→76.1"
+2026-10-28,ekip,calorie_bins,cnn_xgb,"max_depth=6,n_trees=915",val,0.6714,0.7292,0.6677,0.6772,0.6248,0.7272,,0.8613,,,,,,,,,Adım 9 klasik ML
+2026-10-28,ekip,calorie,cnn_xgb,"max_depth=6,n_trees=915",test,,,,,,,,,77.3745,70.8686,84.8102,30.2875,78.8608,114.1721,0.7101,73.1755,"Adım 9 klasik ML; val MAE: max_depth=4→76.4, max_depth=6→76.1"
+2026-10-28,ekip,calorie_bins,cnn_xgb,"max_depth=6,n_trees=915",test,0.7416,0.771,0.7424,0.7467,0.7075,0.7851,,0.8991,,,,,,,,,Adım 9 klasik ML
+2026-10-28,ekip,calorie,hogcolor_xgb,"max_depth=4,n_trees=342",val,,,,,,,,,95.1837,84.0886,106.6808,38.3483,107.2823,134.9653,0.4905,63.9286,"Adım 9 klasik ML; val MAE: max_depth=4→95.2, max_depth=6→95.3"
+2026-10-28,ekip,calorie_bins,hogcolor_xgb,"max_depth=4,n_trees=342",val,0.6286,0.6925,0.6233,0.6271,0.5695,0.6808,,0.7947,,,,,,,,,Adım 9 klasik ML
+2026-10-28,ekip,calorie,hogcolor_xgb,"max_depth=4,n_trees=342",test,,,,,,,,,103.9478,96.2513,112.1278,40.6893,141.0265,139.9466,0.5644,61.7357,"Adım 9 klasik ML; val MAE: max_depth=4→95.2, max_depth=6→95.3"
+2026-10-28,ekip,calorie_bins,hogcolor_xgb,"max_depth=4,n_trees=342",test,0.6272,0.6788,0.629,0.6354,0.5979,0.677,,0.8323,,,,,,,,,Adım 9 klasik ML
+2026-10-28,ekip,cls,hogcolor_svm_rbf,C=10,val,0.2599,0.2559,0.2598,0.2556,0.2364,0.2734,0.6158,,,,,,,,,,"Adım 9 klasik ML; val F1: C=1→0.251, C=10→0.256"
+2026-10-28,ekip,cls,hogcolor_svm_rbf,C=10,test,0.2984,0.2921,0.2984,0.2933,0.2827,0.3043,0.6528,,,,,,,,,,"Adım 9 klasik ML; val F1: C=1→0.251, C=10→0.256"
+2026-10-28,ekip,cls,hogcolor_rf,min_leaf=3,val,0.2465,0.2313,0.2466,0.2263,0.2065,0.2439,0.5795,,,,,,,,,,"Adım 9 klasik ML; val F1: min_leaf=1→0.220, min_leaf=3→0.226"
+2026-10-28,ekip,cls,hogcolor_rf,min_leaf=3,test,0.2702,0.2641,0.2702,0.2495,0.2393,0.2602,0.6109,,,,,,,,,,"Adım 9 klasik ML; val F1: min_leaf=1→0.220, min_leaf=3→0.226"
+2026-10-28,ekip,cls,hogcolor_knn,k=5,val,0.0966,0.1371,0.0966,0.0792,0.0654,0.0917,0.2908,,,,,,,,,,"Adım 9 klasik ML; val F1: k=5→0.079, k=15→0.066, k=31→0.065"
+2026-10-28,ekip,cls,hogcolor_knn,k=5,test,0.0994,0.1589,0.0994,0.0798,0.0726,0.0869,0.3229,,,,,,,,,,"Adım 9 klasik ML; val F1: k=5→0.079, k=15→0.066, k=31→0.065"
+2026-10-28,ekip,cls,cnn_logreg,C=0.01,val,0.7812,0.7866,0.7813,0.7823,0.7628,0.7985,0.9573,,,,,,,,,,"Adım 9 klasik ML; val F1: C=0.01→0.782, C=0.1→0.763, C=1→0.763"
+2026-10-28,ekip,cls,cnn_logreg,C=0.01,test,0.8371,0.8379,0.8371,0.8372,0.8282,0.8463,0.9794,,,,,,,,,,"Adım 9 klasik ML; val F1: C=0.01→0.782, C=0.1→0.763, C=1→0.763"
 2026-10-28,mert,cls,resnet50_cls,resnet50.a1_in1k_lr0.0001/0.001_bs32_224px_ep20/20_ls0.1,val,0.8837,0.885,0.8837,0.8836,0.8688,0.8969,0.9749,,,,,,,,,,Adım 10/13 transfer CNN; 23.6M parametre; 1.31 ms/görüntü (cuda)
 2026-10-28,mert,cls,resnet50_cls,resnet50.a1_in1k_lr0.0001/0.001_bs32_224px_ep20/20_ls0.1,test,0.9125,0.9127,0.9125,0.9121,0.9048,0.9187,0.9901,,,,,,,,,,Adım 10/13 transfer CNN; 23.6M parametre; 1.31 ms/görüntü (cuda)
 2026-10-28,mert,cls,efficientnet_b0_cls,efficientnet_b0.ra_in1k_lr0.0001/0.001_bs32_224px_ep16/20_ls0.1,val,0.8869,0.8883,0.8869,0.8869,0.872,0.9001,0.9733,,,,,,,,,,Adım 10/13 transfer CNN; 4.0M parametre; 0.70 ms/görüntü (cuda)
@@ -69,8 +69,8 @@ date,owner,task,model,config,split,accuracy,precision,recall,f1,f1_ci_low,f1_ci_
 2026-10-29,mert,cls,convnext_tiny_cls,convnext_tiny.in12k_ft_in1k_lr0.0001/0.001_bs32_224px_ep9/20_ls0.1,test,0.9411,0.9421,0.9411,0.9411,0.9348,0.9468,0.9941,,,,,,,,,,Adım 10/13 transfer CNN; 27.8M parametre; 1.49 ms/görüntü (cuda)
 2026-10-29,mert,cls,vit_b16_cls,vit_base_patch16_224.augreg2_in21k_ft_in1k_lr0.0001/0.001_bs32_224px_ep18/20_ls0.1,val,0.9296,0.9302,0.9296,0.9296,0.9177,0.9405,0.9829,,,,,,,,,,Adım 10/13 transfer CNN; 85.8M parametre; 2.40 ms/görüntü (cuda)
 2026-10-29,mert,cls,vit_b16_cls,vit_base_patch16_224.augreg2_in21k_ft_in1k_lr0.0001/0.001_bs32_224px_ep18/20_ls0.1,test,0.9507,0.9508,0.9507,0.9506,0.9449,0.9558,0.9925,,,,,,,,,,Adım 10/13 transfer CNN; 85.8M parametre; 2.40 ms/görüntü (cuda)
-2026-10-30,traldo,calorie,vlm_gemini_3_5_flash_lite,gemini:gemini-3.5-flash-lite_T0_512px,test,,,,,,,,,82.0998,73.7653,89.9951,32.1371,42.0596,125.1489,0.6516,73.9645,"Adım 14 VLM sıfır-atış; 507 tabak, 507 ayrıştırıldı, ayrıştırılamayan 0 (%0.0); metrikler ayrıştırılamayanlar atılarak, train ort. (254 kcal) ile MAE 82.1 PMAE %32.1; token giriş 587613 çıkış 27878; maliyet bilinmiyor (--price-in/--price-out verilmedi)"
-2026-10-30,traldo,calorie_bins,vlm_gemini_3_5_flash_lite,gemini:gemini-3.5-flash-lite_T0_512px,test,0.7574,0.7501,0.7524,0.7507,0.7129,0.7845,,0.8841,,,,,,,,,"Adım 14 VLM sıfır-atış; 507 tabak, 507 ayrıştırıldı, ayrıştırılamayan 0 (%0.0); metrikler ayrıştırılamayanlar atılarak, train ort. (254 kcal) ile MAE 82.1 PMAE %32.1; token giriş 587613 çıkış 27878; maliyet bilinmiyor (--price-in/--price-out verilmedi)"
+2026-10-30,ekip,calorie,vlm_gemini_3_5_flash_lite,gemini:gemini-3.5-flash-lite_T0_512px,test,,,,,,,,,82.0998,73.7653,89.9951,32.1371,42.0596,125.1489,0.6516,73.9645,"Adım 14 VLM sıfır-atış; 507 tabak, 507 ayrıştırıldı, ayrıştırılamayan 0 (%0.0); metrikler ayrıştırılamayanlar atılarak, train ort. (254 kcal) ile MAE 82.1 PMAE %32.1; token giriş 587613 çıkış 27878; maliyet bilinmiyor (--price-in/--price-out verilmedi)"
+2026-10-30,ekip,calorie_bins,vlm_gemini_3_5_flash_lite,gemini:gemini-3.5-flash-lite_T0_512px,test,0.7574,0.7501,0.7524,0.7507,0.7129,0.7845,,0.8841,,,,,,,,,"Adım 14 VLM sıfır-atış; 507 tabak, 507 ayrıştırıldı, ayrıştırılamayan 0 (%0.0); metrikler ayrıştırılamayanlar atılarak, train ort. (254 kcal) ile MAE 82.1 PMAE %32.1; token giriş 587613 çıkış 27878; maliyet bilinmiyor (--price-in/--price-out verilmedi)"
 2026-10-31,mert,calorie,convnext_tiny_reg_mt,convnext_tiny.in12k_ft_in1k_lr0.0001/0.001_bs32_224px_ep25/30_l1_raw,val,,,,,,,,,42.8464,37.3457,49.52,17.2623,29.5026,67.0492,0.8743,91.0714,"Adım 11–13 transfer CNN; mass MAE 31.1, fat MAE 3.5, carb MAE 3.9, protein MAE 3.5"
 2026-10-31,mert,calorie_bins,convnext_tiny_reg_mt,convnext_tiny.in12k_ft_in1k_lr0.0001/0.001_bs32_224px_ep25/30_l1_raw,val,0.8036,0.811,0.8034,0.8052,0.7575,0.8489,,0.9396,,,,,,,,,"Adım 11–13 transfer CNN; mass MAE 31.1, fat MAE 3.5, carb MAE 3.9, protein MAE 3.5"
 2026-10-31,mert,calorie,convnext_tiny_reg_mt,convnext_tiny.in12k_ft_in1k_lr0.0001/0.001_bs32_224px_ep25/30_l1_raw,test,,,,,,,,,40.3021,36.1601,45.258,15.7758,27.2793,67.4226,0.8989,88.3629,"Adım 11–13 transfer CNN; mass MAE 25.5, fat MAE 3.1, carb MAE 4.6, protein MAE 4.2"

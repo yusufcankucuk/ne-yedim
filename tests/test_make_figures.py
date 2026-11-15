@@ -1,4 +1,4 @@
-"""Adım 15 figür betiğinin saf yardımcıları + sentetik verilerle uçtan uca duman testi (results/'a dokunmaz)."""
+"""Figür betiğinin saf yardımcıları + sentetik verilerle uçtan uca duman testi (results/'a dokunmaz)."""
 import csv
 
 import numpy as np

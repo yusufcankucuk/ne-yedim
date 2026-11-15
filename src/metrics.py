@@ -1,4 +1,4 @@
-"""ORTAK metrikler (§6.2). Tüm deneyler bu dosyayı kullanır.
+"""ORTAK metrikler (§4.2). Tüm deneyler bu dosyayı kullanır.
 
 PMAE ile MAPE aynı şey değil: literatürdeki "yüzde hata" PMAE'dir (MAE / ortalama gerçek değer).
 Literatürle karşılaştırırken PMAE kullanın.

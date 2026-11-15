@@ -5,7 +5,7 @@ Analiz ve tablolar için checkpoint gerekmez; results/preds/*.csv yeter ve onlar
 Checkpoint yalnızca final model (demo) ve Grad-CAM için paylaşılır.
 "data" Release'i: veri arşivleri (ör. Food-101 alt kümesi, bkz. scripts/get_food101.py).
 
-    export GH_TOKEN=...      # Kaggle'da: Add-ons → Secrets (bkz. README §5.1)
+    export GH_TOKEN=...      # Kaggle'da: Add-ons → Secrets (bkz. README §3.1)
     python scripts/share_checkpoint.py upload checkpoints/resnet50_reg.pt
     python scripts/share_checkpoint.py download resnet50_reg.pt
     python scripts/share_checkpoint.py list

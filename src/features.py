@@ -1,7 +1,7 @@
-"""Klasik ML için özellik çıkarımı (Adım 9). Sonuçlar data/features/<veri>_<özellik>_<bölme>.npz'e önbelleğe alınır.
+"""Klasik ML için özellik çıkarımı. Sonuçlar data/features/<veri>_<özellik>_<bölme>.npz'e önbelleğe alınır.
 
 hog_color — elle tasarlanmış: 128×128 gri görüntüde HOG (1764) + HSV renk histogramı (3 × 32 = 96) → 1860 boyut.
-            Görüntü kırpılmadan küçültülür (Nutrition5k'da porsiyon bilgisi korunsun, §6.1).
+            Görüntü kırpılmadan küçültülür (Nutrition5k'da porsiyon bilgisi korunsun, §4.1).
 cnn       — donmuş ImageNet ResNet-50'nin havuzlanmış çıktısı → 2048 boyut (ince ayar yok).
 
 ÖNEMLİ: torch ile xgboost aynı süreçte yüklenince macOS'ta çöküyor (ikisi de kendi OpenMP kütüphanesini getiriyor,

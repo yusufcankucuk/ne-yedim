@@ -1,9 +1,9 @@
-"""Demo (Adım 19): telefondan yemek fotoğrafı çek veya yükle → tahmini kcal, kütle ve makrolar.
+"""Demo: telefondan yemek fotoğrafı çek veya yükle → tahmini kcal, kütle ve makrolar.
 
     python app.py                      # Mac'te: http://127.0.0.1:7860 (varsayılan checkpoint: convnext_tiny_reg_mt.pt)
     python app.py --lan                # aynı Wi-Fi'daki telefondan: http://<mac-ip>:7860
     python app.py --share              # geçici herkese açık gradio.live linki (sunum yedeği)
-    python scripts/deploy_space.py     # Hugging Face Space (README §7 Faz 4; Gradio Space için PRO gerekiyor)
+    python scripts/deploy_space.py     # Hugging Face Space (README §5 Faz 4; Gradio Space için PRO gerekiyor)
 
 Hugging Face Space'te bu dosya olduğu gibi çalışır (argüman yok → varsayılanlar).
 """
@@ -93,7 +93,7 @@ ABOUT = """
 | Test, 507 tabak | MAE 40,3 kcal [%95 GA 36,2–45,3], PMAE %15,8, R² 0,90; tahminlerin %88'i ±100 kcal içinde |
 | Karşılaştırma | Sıfır-atış VLM (Gemini 3.5 Flash-Lite) 82,1 kcal · klasik ML (donmuş ResNet-50 → XGBoost) 77,4 · Nutrition5k makalesi RGB 70,6 |
 
-Kod, deneyler ve rapor: [github.com/traldo44/kalori-tahmini](https://github.com/traldo44/kalori-tahmini)
+Kod, deneyler ve rapor: [github.com/yusufcankucuk/ne-yedim](https://github.com/yusufcankucuk/ne-yedim)
 """
 
 
@@ -169,7 +169,7 @@ def make_demo(model, meta, device):
         with gr.Accordion("Model ve sonuçlar", open=False):
             gr.Markdown(ABOUT)
         gr.HTML('<div id="altbilgi">Bitirme projesi, 2026. Tahminler bilgilendirme amaçlıdır; tıbbi veya diyet kararı için kullanılmaz. '
-                '<a href="https://github.com/traldo44/kalori-tahmini">Kaynak kod</a></div>')
+                '<a href="https://github.com/yusufcankucuk/ne-yedim">Kaynak kod</a></div>')
         inp.change(run, inp, [out, seen])
     return demo
 

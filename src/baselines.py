@@ -1,4 +1,4 @@
-"""Adım 8 — naif baseline'lar: hiçbir şey öğrenmeyen referans modeller (Tablo 1, 2, 3'ün ilk satırları).
+"""Naif baseline'lar: hiçbir şey öğrenmeyen referans modeller (Tablo 1, 2, 3'ün ilk satırları).
 
     python -m src.baselines
 
@@ -15,7 +15,7 @@ from .data import FOOD101_CLASSES, Food101Subset, load_n5k_split, make_val_split
 from .metrics import classification_metrics, regression_metrics, bin_scores, to_bins
 from .results import log_result, save_preds
 
-NOTE = "Adım 8 naif baseline"
+NOTE = "naif baseline"
 
 
 def calorie_baselines():

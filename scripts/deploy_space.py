@@ -1,6 +1,6 @@
-"""Demoyu Hugging Face Space olarak yayınla / güncelle (Adım 19).
+"""Demoyu Hugging Face Space olarak yayınla / güncelle.
 
-    python scripts/deploy_space.py                 # traldo/kalori-tahmini Space'ini oluşturur veya günceller
+    python scripts/deploy_space.py                 # ne-yedim Space'ini oluşturur veya günceller
     python scripts/deploy_space.py --no-ckpt       # yalnızca kod/README değişti, 111 MB checkpoint'i yeniden yükleme
     python scripts/deploy_space.py --repo ad/space # başka hesap/ad
 
@@ -22,7 +22,7 @@ CODE_FILES = ["app.py", "src/__init__.py", "src/config.py", "src/transforms.py",
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--repo", default="traldo/kalori-tahmini")
+    ap.add_argument("--repo", default="ne-yedim")
     ap.add_argument("--no-ckpt", action="store_true", help="checkpoint'i yeniden yükleme")
     ap.add_argument("--private", action="store_true")
     args = ap.parse_args()

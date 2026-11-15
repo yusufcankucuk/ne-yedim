@@ -1,4 +1,4 @@
-"""Grad-CAM: kalori modelinin tabağın neresine baktığı (Adım 15 figürü).
+"""Grad-CAM: kalori modelinin tabağın neresine baktığı.
 
 Kullanım:
     python -m src.gradcam --ckpt checkpoints/convnext_tiny_reg_mt.pt           # → results/figures/eval_gradcam.png

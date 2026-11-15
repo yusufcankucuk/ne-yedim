@@ -1,4 +1,4 @@
-"""Final checkpoint'i tarayıcıda çalışacak ONNX modeline çevir (Adım 19, web/ demosu → Vercel).
+"""Final checkpoint'i tarayıcıda çalışacak ONNX modeline çevir (web/ demosu → Vercel).
 
     python scripts/export_onnx.py                       # checkpoints/convnext_tiny_reg_mt.pt → web/model.onnx (int8, ~35 MB)
     python scripts/export_onnx.py --no-quant            # fp32 (111 MB; yalnızca karşılaştırma için)

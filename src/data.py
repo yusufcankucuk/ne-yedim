@@ -15,7 +15,7 @@ from .config import FOOD101_DIR, N5K_DIR, SEED, VAL_FRACTION, VAL_GROUP_GAP_SEC
 TARGETS = ("calories", "mass", "fat", "carb", "protein")
 
 # EDA'da bulunan hatalı tabaklar: eğitimden ve değerlendirmeden çıkarılır.
-# Yeni bulduğunuzu gerekçesiyle buraya ekleyin ve devir günlüğüne yazın.
+# Yeni bulduğunuzu gerekçesiyle buraya ekleyin.
 BAD_DISHES = {
     "dish_1559172356": "görüntüde yemek yok, telefon var (etiket 313 kcal)",
     "dish_1560974769": "veri giriş hatası: '2991 g beyaz pirinç' (fotoğrafta küçük porsiyon) → 3943 kcal",

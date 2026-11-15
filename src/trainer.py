@@ -1,4 +1,4 @@
-"""Ortak eğitim döngüsü (Adım 10–13, §6.1): AdamW (omurga / başlık ayrı öğrenme hızı), 1 epoch ısınma + cosine,
+"""Ortak eğitim döngüsü (§4.1): AdamW (omurga / başlık ayrı öğrenme hızı), 1 epoch ısınma + cosine,
 val skoruna göre erken durdurma ve en iyi ağırlıklara dönüş, CUDA'da karma hassasiyet (AMP).
 """
 import csv
