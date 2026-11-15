@@ -2,7 +2,7 @@
 
 Tek bir yemek fotoğrafından tabaktaki toplam kaloriyi (ve kütle ile makroları) tahmin eden derin öğrenme projesi. Ayrıca Food-101'in 25 sınıflık alt kümesinde yemek türü sınıflandırması yapılır; sonuçlar klasik ML yöntemleri, literatür ve sıfır-atış görü-dil modelleri (VLM) ile karşılaştırılır.
 
-**Canlı demo:** https://kalori-tahmini-web.vercel.app (model tarayıcıda çalışır, telefondan kullanılabilir)
+**Canlı demo:** https://ne-yedim-web.vercel.app/ (model tarayıcıda çalışır, telefondan kullanılabilir)
 
 | Görev | Final model | Test sonucu |
 | --- | --- | --- |
@@ -528,7 +528,7 @@ Raporda: Nutrition5k test MAE'si ile kendi fotoğraflarımızdaki MAE yan yana; 
 
 | Yol | Komut | Ne zaman |
 | --- | --- | --- |
-| **Kalıcı adres: Vercel, statik** → **https://kalori-tahmini-web.vercel.app** | `web/` klasörü; model tarayıcıda çalışır (`web/model.onnx`, int8, 28 MB; `python scripts/export_onnx.py` üretir). Vercel'de proje → repo `traldo44/kalori-tahmini`, Root Directory `web`, Framework `Other` | Sunucu yok, ücretsiz, kalıcı; her `main` push'unda kendiliğinden yeniden yayınlanır. Telefon ilk açılışta modeli bir kez indirir (28 MB), sonra önbellekte. Fotoğraf cihazdan çıkmaz |
+| **Kalıcı adres: Vercel, statik** → **https://ne-yedim-web.vercel.app/** | `web/` klasörü; model tarayıcıda çalışır (`web/model.onnx`, int8, 28 MB; `python scripts/export_onnx.py` üretir). Vercel'de proje → repo `traldo44/kalori-tahmini`, Root Directory `web`, Framework `Other` | Sunucu yok, ücretsiz, kalıcı; her `main` push'unda kendiliğinden yeniden yayınlanır. Telefon ilk açılışta modeli bir kez indirir (28 MB), sonra önbellekte. Fotoğraf cihazdan çıkmaz |
 | Hugging Face Space (denendi, olmadı) | `python scripts/deploy_space.py` | Gradio Space'ler ücretsiz hesapta artık yok (402, PRO ister); dosyalar `space/` altında duruyor |
 | Aynı Wi-Fi | `python app.py --lan` → ekrana yazılan `http://<mac-ip>:7860` | Sunum odasında Mac ve telefon aynı ağdaysa, internet gerekmez |
 | Geçici link | `python app.py --share` → `*.gradio.live` | Yedek; Mac açık kaldığı sürece çalışır (72 sa) |
